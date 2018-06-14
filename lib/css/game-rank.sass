@@ -1,0 +1,35 @@
+@import 'components/section.sass'
+@import 'components/crumbs.sass'
+@import 'components/game-list.sass'
+@import 'components/type-list2.sass'
+@import 'components/loading.sass'
+/* rank */
+.rank
+  .bg-img
+    width: 100%
+    height: 200px
+  .title-list
+    display: flex
+    margin-top: -36px
+    .title-item
+      width: 33.3333%
+      height: 36px
+      line-height: 36px
+      border-radius: 20px 20px 0 0
+      background: #e0f1f4
+      text-align: center
+      font-size: 15px
+      &.on
+        background: #fff
+        box-shadow: 0 -2px 2px rgba(0,143,219,0.6)
+.rank-list 
+  .rank-list-container
+    display: none
+    &.on
+      display: block
+/* game-type-list */
+.game-type-list:last-of-type
+  margin-bottom: 0
+/* footer */
+footer
+  margin-top: 10px

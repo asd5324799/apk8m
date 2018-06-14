@@ -1,0 +1,77 @@
+/* game-list */
+.game-list
+    overflow: hidden
+    .game-item
+        position: relative
+        min-height: 64px
+        padding: 10px
+        border-bottom: 1px solid #dbe1ec
+        img
+            position: absolute
+            top: 10px
+            left: 10px
+            width: 64px
+            height: 64px
+            border-radius: 5px
+        .content
+            padding-left: 74px
+            .game-name
+                padding-right: 65px
+                font-size: 16px
+                overflow: hidden
+                white-space: nowrap
+                text-overflow: ellipsis
+            .type
+                margin: 9px 0
+                padding-right: 65px
+                font-size: 12px
+                color: #999
+                overflow:  hidden
+                white-space:  nowrap
+                text-overflow: ellipsis
+                .border-left
+                    margin-left: 5px
+                    padding-left: 5px
+                    border-left: 1px solid #999
+            .boon
+                font-size: 12px
+                color: #45abff
+                overflow: hidden
+                white-space: nowrap
+                text-overflow: ellipsis
+        .download
+                position: absolute
+                right: 10px
+                top: 25px
+                width: 60px
+                height: 30px
+                line-height: 30px
+                border-radius: 5px
+                text-align: center
+                background: #45abff
+                color: #fff
+        &.rank
+            .num
+                position: absolute
+                left: 10px
+                top: 28.5px
+                width: 22px
+                height: 28px
+                line-height: 28px
+                text-align: center
+                font-size: 16px
+                color: #999
+                background-size: 100%
+                &.rank1
+                    font-size: 0
+                    background-image: url(../images/list_no_1.png)
+                &.rank2
+                    font-size: 0
+                    background-image: url(../images/list_no_2.png)
+                &.rank3
+                    font-size: 0
+                    background-image: url(../images/list_no_3.png)
+            img
+                left: 42px
+            .content
+                padding-left: 104px

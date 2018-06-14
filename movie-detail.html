@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no" />
+  <title></title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="applicable-device" content="mobile">
+  <title>Document</title>
+  <link rel="stylesheet" href="lib/css/base.css">
+  <link rel="stylesheet" href="lib/css/movie-detail.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header id="header">
+    <!-- top -->
+    <div id="top">
+      <div>
+        <span :class="{on: isActive}" @click="isShow"></span>
+        <a href=""></a>
+        <div class="search">
+          <form action="" id="searchBox">
+            <input type="submit">
+            <div>
+              <input type="text" id="bdcsMain" placeholder="请输入关键字">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- nav -->
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="/">首页</a>
+        </li>
+        <li>
+          <a href="">游戏</a>
+        </li>
+        <li>
+          <a href="">软件</a>
+        </li>
+        <li>
+          <a href="">排行榜</a>
+        </li>
+        <li>
+          <a href="">专题</a>
+        </li>
+        <li class="current">
+          <a href="">资讯</a>
+        </li>
+      </ul>
+    </div>
+    <!-- nav-list -->
+    <transition name="fade">
+      <div class="burger" v-show="showList">
+        <div class="mgame-yx">
+          <div class="Head1">
+            <h2>热门栏目</h2>
+          </div>
+          <ul class="icon-btn2">
+            <li>
+              <a href="">
+                <p>破解游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>变态手游</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>满V手游</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>单机游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>平板游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>儿童游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>排行榜</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>游戏专题</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>游戏资讯</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mgame-yx">
+          <div class="Head1">
+            <h2>破解版</h2>
+          </div>
+          <ul class="icon-btn2">
+            <li>
+              <a href="">
+                <p>内购破解</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>无限金币</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>汉化版</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mgame-yx">
+          <div class="Head1">
+            <h2>其他栏目</h2>
+          </div>
+          <ul class="icon-btn2">
+            <li>
+              <a href="">
+                <p>手机主题</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>手机主题</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>游戏视频</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>安卓漫画</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="back">
+          <button @click="isShow">关闭菜单</button>
+        </div>
+      </div>
+    </transition>
+    <!-- return-top -->
+    <div class="return-top" v-show="returnShow">
+      <a href="/" class="index-page"></a>
+      <a href="javascript:void(0);" class="top" @click="backTop"></a>
+    </div>
+  </header>
+  <!-- main -->
+  <main id="main">
+    <!-- crumbs -->
+    <div class="crumbs">
+      <a href="" class="text">首页</a>
+      <span class="text">></span>
+      <a href="" class="text">游戏视频</a>
+      <span class="text">></span>
+      <span class="text">动作游戏视频</span>
+    </div>
+    <!-- video -->
+    <section class="video-wrapper">
+      <video :poster="poster" :src="src" :url="url" :autoplay="autoplay"></video>
+      <div class="play" v-if="ifPlay" @click="playMovie"></div>
+    </section>
+    <!-- video-info -->
+    <section class="video-info">
+      <div class="video-title">【月舞解说】英雄联盟精彩视频</div>
+      <div class="video-content">&nbsp;&nbsp;观看次数：135985次&nbsp;|&nbsp;发布时间：2018-4-16</div>
+    </section>
+    <!-- game-info -->
+    <section class="game-list">
+      <div class="game-item">
+        <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="">
+        <div class="content">
+          <div class="game-name">楚留香手游</div>
+          <div class="type">
+            <span class="text">大型游戏</span>
+            <span class="text border-left">343.90MB</span>
+          </div>
+          <div class="boon">上线赠送满级VIP特权，元宝9999！</div>
+        </div>
+        <a href="" class="download">安装</a>
+      </div>
+      <ul class="type-list">
+        <li class="type-item">破解版</li>
+        <li class="type-item">汉化版</li>
+        <li class="type-item">无限金币版</li>
+        <li class="type-item">汉化版</li>
+      </ul>
+    </section>
+    <!-- about-walkthrough -->
+    <section>
+      <div class="title">
+        <h4 class="content">相关攻略</h4>
+        <a href="" class="change">
+          <i></i>更多+</a>
+      </div>
+      <ul class="news-list">
+        <li class="news-item">
+          <a href="">
+            <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+            <div class="container">
+              <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+              <div class="news-date">2018-04-26 10:00:01</div>
+            </div>
+          </a>
+        </li>
+        <li class="news-item">
+          <a href="">
+            <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+            <div class="container">
+              <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+              <div class="news-date">2018-04-26 10:00:01</div>
+            </div>
+          </a>
+        </li>
+        <li class="news-item">
+          <a href="">
+            <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+            <div class="container">
+              <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+              <div class="news-date">2018-04-26 10:00:01</div>
+            </div>
+          </a>
+        </li>
+        <li class="news-item">
+          <a href="">
+            <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+            <div class="container">
+              <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+              <div class="news-date">2018-04-26 10:00:01</div>
+            </div>
+          </a>
+        </li>
+        <li class="news-item">
+          <a href="">
+            <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+            <div class="container">
+              <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+              <div class="news-date">2018-04-26 10:00:01</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="loading" @click="loadingMore">{{more}}</div>
+    </section>
+    <!-- movie-list -->
+    <section>
+      <div class="title">
+        <h4 class="content">
+          <span class="text" :class="{on: on === 1}" @click="tab(1)">最新</span>
+          <span class="text border-left" :class="{on: on === 2}" @click="tab(2)">热门</span>
+        </h4>
+      </div>
+      <div class="list-wrapper" :class="{on: on === 1}">
+        <ul class="movie-list">
+          <li class="movie-item">
+            <a href="">
+              <img class="movie-img" src="http://img.apk8.com/d/file/splb/2017-12-08/f47ddd375bc3faf08c0e117119ca4cef.jpg" alt="">
+              <div class="text">《超能游戏王》视频曝光：魔幻3D战略手游</div>
+            </a>
+          </li>
+          <li class="movie-item">
+            <a href="">
+              <img class="movie-img" src="http://img.apk8.com/d/file/splb/2017-12-08/f47ddd375bc3faf08c0e117119ca4cef.jpg" alt="">
+              <div class="text">《超能游戏王》视频曝光：魔幻3D战略手游</div>
+            </a>
+          </li>
+          <li class="movie-item">
+            <a href="">
+              <img class="movie-img" src="http://img.apk8.com/d/file/splb/2017-12-08/f47ddd375bc3faf08c0e117119ca4cef.jpg" alt="">
+              <div class="text">《超能游戏王》视频曝光：魔幻3D战略手游</div>
+            </a>
+          </li>
+          <li class="movie-item">
+            <a href="">
+              <img class="movie-img" src="http://img.apk8.com/d/file/splb/2017-12-08/f47ddd375bc3faf08c0e117119ca4cef.jpg" alt="">
+              <div class="text">《超能游戏王》视频曝光：魔幻3D战略手游</div>
+            </a>
+          </li>
+          <li class="movie-item">
+            <a href="">
+              <img class="movie-img" src="http://img.apk8.com/d/file/splb/2017-12-08/f47ddd375bc3faf08c0e117119ca4cef.jpg" alt="">
+              <div class="text">《超能游戏王》视频曝光：魔幻3D战略手游</div>
+            </a>
+          </li>
+          <li class="movie-item">
+            <a href="">
+              <img class="movie-img" src="http://img.apk8.com/d/file/splb/2017-12-08/f47ddd375bc3faf08c0e117119ca4cef.jpg" alt="">
+              <div class="text">《超能游戏王》视频曝光：魔幻3D战略手游</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="list-wrapper" :class="{on: on === 2}">
+        <ul class="movie-list">
+          <li class="movie-item">
+            <a href="">
+              <img class="movie-img" src="http://img.apk8.com/d/file/splb/2017-12-08/f47ddd375bc3faf08c0e117119ca4cef.jpg" alt="">
+              <div class="text">《超能游戏王》视频曝光：魔幻3D战略手游2</div>
+            </a>
+          </li>
+          <li class="movie-item">
+            <a href="">
+              <img class="movie-img" src="http://img.apk8.com/d/file/splb/2017-12-08/f47ddd375bc3faf08c0e117119ca4cef.jpg" alt="">
+              <div class="text">《超能游戏王》视频曝光：魔幻3D战略手游</div>
+            </a>
+          </li>
+          <li class="movie-item">
+            <a href="">
+              <img class="movie-img" src="http://img.apk8.com/d/file/splb/2017-12-08/f47ddd375bc3faf08c0e117119ca4cef.jpg" alt="">
+              <div class="text">《超能游戏王》视频曝光：魔幻3D战略手游</div>
+            </a>
+          </li>
+          <li class="movie-item">
+            <a href="">
+              <img class="movie-img" src="http://img.apk8.com/d/file/splb/2017-12-08/f47ddd375bc3faf08c0e117119ca4cef.jpg" alt="">
+              <div class="text">《超能游戏王》视频曝光：魔幻3D战略手游</div>
+            </a>
+          </li>
+          <li class="movie-item">
+            <a href="">
+              <img class="movie-img" src="http://img.apk8.com/d/file/splb/2017-12-08/f47ddd375bc3faf08c0e117119ca4cef.jpg" alt="">
+              <div class="text">《超能游戏王》视频曝光：魔幻3D战略手游</div>
+            </a>
+          </li>
+          <li class="movie-item">
+            <a href="">
+              <img class="movie-img" src="http://img.apk8.com/d/file/splb/2017-12-08/f47ddd375bc3faf08c0e117119ca4cef.jpg" alt="">
+              <div class="text">《超能游戏王》视频曝光：魔幻3D战略手游</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer>
+    <div class="nav-list">
+      <a href="">
+        <em>网站地图</em>
+      </a>
+      <a href="">
+        <em>最新更新</em>
+      </a>
+      <a href="">
+        <em>电脑版</em>
+      </a>
+    </div>
+  </footer>
+  <script src="lib/js/vue.min.js"></script>
+  <script src="lib/js/axios.min.js"></script>
+  <script src="lib/js/common.js"></script>
+  <script src="lib/js/movie-detail.js"></script>
+</body>
+
+</html>

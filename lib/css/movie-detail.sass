@@ -1,0 +1,60 @@
+@import 'components/crumbs.sass'
+@import 'components/section.sass'
+@import 'components/news-item.sass'
+@import 'components/loading.sass'
+@import 'components/movie-list.sass'
+@import 'components/game-list.sass'
+
+.video-wrapper
+  position: relative
+  video
+    margin: 10px 0
+    width: 100%
+  .play
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    width: 50px
+    height: 50px
+    margin: auto
+    border-radius: 50%
+    background:
+      image: url(../images/play.png)
+      size: 100%
+      color: rgba(0, 0, 0, 0.7)
+
+.video-info
+  padding: 10px
+  .video-title
+    font-size: 18px
+    font-weight: bold
+  .video-content
+    margin-top: 15px
+    color: #999999
+
+.game-list
+  .game-item
+    border: none
+.type-list
+  margin: 0 10px 10px
+  .type-item
+    display: inline-block
+    height: 26px
+    line-height: 26px
+    padding: 0 14px
+    border: 1px solid
+    border-radius: 3px
+    &:nth-of-type(n)
+      color:#45abff
+      border-color:#45abff
+    &:nth-of-type(2n)
+      color:#86c610
+      border-color:#86c610
+    &:nth-of-type(5n)
+      color:#ff9d10
+      border-color:#ff9d10
+    &:nth-of-type(3n)
+      color:#00b573
+      border-color:#00b573

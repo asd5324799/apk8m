@@ -1,0 +1,251 @@
+/* index.css*/
+@import 'components/section.sass'
+@import 'components/game-list.sass'
+/* swiper */
+#index-swiper
+    width: 100%
+    height: 180px
+    .swiper-slide 
+        .img 
+            width: 100%
+            height: 100%
+    .swiper-pagination-bullet 
+        width: 16px
+        height: 4px
+        border-radius: 5px
+/* nav */
+.nav
+    .nav-list
+        display: flex
+        .nav-item
+            flex: 1
+            margin: 10px 0
+            text-align: center
+            .icon
+                display: block
+                width: 45px
+                height: 45px
+                margin: 0 auto 5px
+/* game-recommend */
+.game-recommend
+  @import 'components/top-list.sass'
+/* game-break and hot-game */
+.game-break
+    .app-list
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 10px
+        .app-item
+            flex: 0 0 25%
+            margin-top: 15px
+            text-align: center
+            .game-icon
+                display: block
+                width: 64px
+                height: 64px
+                margin: 0 auto
+                border-radius: 10px
+            .game-name
+                display: block
+                margin-top: 5px
+                line-height: 18px
+                font-size: 12px
+/* must-app */
+.must-app
+    .app-list
+        display: flex
+        flex-wrap: wrap
+        margin-bottom: 10px
+        .app-item
+            flex: 0 0 25%
+            margin-top: 15px
+            text-align: center
+            .app-icon
+                display: block
+                width: 64px
+                height: 64px
+                margin: 0 auto
+                border-radius: 10px
+            .app-name
+                display: block
+                line-height: 28px
+                font-size: 14px
+                overflow: hidden
+                white-space: nowrap
+                text-overflow: ellipsis
+            .download
+                display: block
+                width: 64px
+                height: 30px
+                line-height: 30px
+                margin: 0 auto
+                border: 1px solid #72c322
+                border-radius: 5px
+                color: #72c322
+/* rank */
+.rank
+    .rank-list
+        .rank-item
+            position: relative
+            min-height: 64px
+            overflow: hidden
+            margin: 10px
+            .num
+                position: absolute
+                left: 0
+                top: 20px
+                width: 22px
+                height: 28px
+                line-height: 28px
+                text-align: center
+                font-size: 16px
+                color: #999
+            &.rank1
+                background-image: url(../images/list_no_1.png)
+                background-size: 100%
+                font-size: 0
+            &.rank2
+                background-image: url(../images/list_no_2.png)
+                background-size: 100%
+                font-size: 0
+            &.rank3
+                background-image: url(../images/list_no_3.png)
+                background-size: 100%
+                font-size: 0
+            .game-icon
+                position: absolute
+                left: 32px
+                top: 0
+                width: 64px
+                height: 64px
+                border-radius: 50%
+            .container
+                padding: 10px 70px 0 112px
+                .game-name
+                    margin-bottom: 10px
+                    overflow: hidden
+                    white-space: nowrap
+                    text-overflow: ellipsis
+                .type
+                    color: #999
+                    overflow: hidden
+                    white-space: nowrap
+                    text-overflow: ellipsis
+            .download
+                position: absolute
+                right: 0px
+                top: 15px
+                width: 60px
+                height: 30px
+                line-height: 30px
+                border-radius: 5px
+                text-align: center
+                background: #45abff
+                color: #fff
+/* topic */
+.game-topic
+    .topic-list
+        display: flex
+        flex-wrap: wrap
+        padding-bottom: 15px
+    .topic-item
+        flex: 0 0 50%
+        margin-top: 15px
+        text-align: center
+        overflow: hidden
+        .topic-icon
+            display: block
+            width: 90%
+            height: 84px
+            margin: 0 auto 5px
+            border-radius: 5px
+        .text
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+/* hot-news */
+.hot-news
+    .Head3
+        display: block
+        position: relative
+        background: #fff
+        height: 42px
+        overflow: hidden
+        span
+            display: inline-block
+            position: absolute
+            z-index: 9
+            width: 50%
+            left: 20%
+            height: 21px
+            background: #f7f7f7
+        em
+            display: inline-block
+            position: absolute
+            z-index: 9
+            width: 50%
+            top: 21px
+            left: 20%
+            height: 21px
+            background: #fff
+        .Head3-box
+            position: absolute
+            width: 100%
+            z-index: 10
+            top: 0
+            left: 0
+            a
+                float: left
+                text-align: center
+                background: #f7f7f7
+                color: #666
+                font-size: 16px
+                line-height: 42px
+                width: 50%
+                &.cur2
+                    background: #fff
+                    color: #333
+                &:first-of-type.off
+                    border-radius: 0px 0px 21px
+                &:last-of-type.cur2
+                    border-radius: 21px 0px 0px
+                &:first-of-type.cur2
+                    border-radius: 0px 21px 0px 0px
+                &:last-of-type.off
+                    border-radius: 0px 0px 0px 21px
+    .news-list
+        opacity: 1
+        transition: all .3S ease-in
+        &.newsList-enter-active
+            opacity: 0
+        &.newsList-leave-active
+            display: none
+        @import 'components/news-item.sass'
+        .more 
+            display: block
+            text-align: center
+            padding: 10px 0
+            border-bottom: 1px #dbe1ec solid
+            color: #999
+/* friend-link */
+.friend-link
+    .friend-title
+        font-size: 15px
+        height: 45px
+        line-height: 45px
+        padding-left: 10px
+        border-bottom: 1px solid #e4e4e4
+    .container
+        overflow: hidden
+        margin: 5px 10px
+        a
+            font-size: 12px
+            box-sizing: border-box
+            color: #666
+            width: 33.3%
+            float: left
+            line-height: 28px
+            overflow: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+            padding-right: 10px

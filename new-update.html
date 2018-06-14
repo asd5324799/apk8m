@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no" />
+  <title></title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="applicable-device" content="mobile">
+  <title>Document</title>
+  <link rel="stylesheet" href="lib/css/base.css">
+  <link rel="stylesheet" href="lib/css/new-update.css">
+</head>
+<body>
+  <header id="header">
+    <!-- top -->
+    <div id="top">
+      <div>
+        <span :class="{on: isActive}" @click="isShow"></span>
+        <a href=""></a>
+        <div class="search">
+          <form action="" id="searchBox">
+            <input type="submit">
+            <div>
+              <input type="text" id="bdcsMain" placeholder="请输入关键字">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- nav -->
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="/">首页</a>
+        </li>
+        <li>
+          <a href="">游戏</a>
+        </li>
+        <li>
+          <a href="">软件</a>
+        </li>
+        <li class="current">
+          <a href="">排行榜</a>
+        </li>
+        <li>
+          <a href="">专题</a>
+        </li>
+        <li>
+          <a href="">资讯</a>
+        </li>
+      </ul>
+    </div>
+    <!-- nav-list -->
+    <transition name="fade">
+      <div class="burger" v-show="showList">
+        <div class="mgame-yx">
+          <div class="Head1">
+            <h2>热门栏目</h2>
+          </div>
+          <ul class="icon-btn2">
+            <li>
+              <a href="">
+                <p>破解游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>变态手游</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>满V手游</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>单机游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>平板游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>儿童游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>排行榜</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>游戏专题</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>游戏资讯</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mgame-yx">
+          <div class="Head1">
+            <h2>破解版</h2>
+          </div>
+          <ul class="icon-btn2">
+            <li>
+              <a href="">
+                <p>内购破解</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>无限金币</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>汉化版</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mgame-yx">
+          <div class="Head1">
+            <h2>其他栏目</h2>
+          </div>
+          <ul class="icon-btn2">
+            <li>
+              <a href="">
+                <p>手机壁纸</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>手机主题</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>游戏视频</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>安卓漫画</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="back">
+          <button @click="isShow">关闭菜单</button>
+        </div>
+      </div>
+    </transition>
+    <!-- return-top -->
+    <div class="return-top" v-show="returnShow">
+      <a href="/" class="index-page"></a>
+      <a href="javascript:void(0);" class="top" @click="backTop"></a>
+    </div>
+  </header>
+  <main id="main">
+    <section>
+      <div class="title">
+        <div class="content">最新破解游戏</div>
+        <a href="" class="change">
+          <i></i>更多+</a>
+      </div>
+      <div class="container">
+        <ul class="game-list">
+          <li class="game-item"><a href=""><span class="game-name">世界末日求生破解版&nbsp;|&nbsp;内购破解&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">世界末日求生破解版&nbsp;|&nbsp;内购破解&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">世界末日求生破解版&nbsp;|&nbsp;内购破解&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">世界末日求生破解版&nbsp;|&nbsp;内购破解&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">世界末日求生破解版&nbsp;|&nbsp;内购破解&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">世界末日求生破解版&nbsp;|&nbsp;内购破解&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">世界末日求生破解版&nbsp;|&nbsp;内购破解&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">世界末日求生破解版&nbsp;|&nbsp;内购破解&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">世界末日求生破解版&nbsp;|&nbsp;内购破解&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">世界末日求生破解版&nbsp;|&nbsp;内购破解&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="title">
+        <div class="content">最新手机网游</div>
+        <a href="" class="change">
+          <i></i>更多+</a>
+      </div>
+      <div class="container">
+        <ul class="game-list">
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="title">
+        <div class="content">最新单机游戏</div>
+        <a href="" class="change">
+          <i></i>更多+</a>
+      </div>
+      <div class="container">
+        <ul class="game-list">
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">第五人格&nbsp;|&nbsp;角色扮演&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="title">
+        <div class="content">最新安卓软件</div>
+        <a href="" class="change">
+          <i></i>更多+</a>
+      </div>
+      <div class="container">
+        <ul class="game-list">
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="title">
+        <div class="content">最新游戏专题</div>
+        <a href="" class="change">
+          <i></i>更多+</a>
+      </div>
+      <div class="container">
+        <ul class="game-list">
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">3733游戏盒&nbsp;|&nbsp;游戏工具&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="title">
+        <div class="content">最新排行榜</div>
+        <a href="" class="change">
+          <i></i>更多+</a>
+      </div>
+      <div class="container">
+        <ul class="game-list">
+          <li class="game-item"><a href=""><span class="game-name">回合制手游排行榜&nbsp;|&nbsp;排行榜&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">回合制手游排行榜&nbsp;|&nbsp;排行榜&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">回合制手游排行榜&nbsp;|&nbsp;排行榜&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">回合制手游排行榜&nbsp;|&nbsp;排行榜&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">回合制手游排行榜&nbsp;|&nbsp;排行榜&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">回合制手游排行榜&nbsp;|&nbsp;排行榜&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">回合制手游排行榜&nbsp;|&nbsp;排行榜&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">回合制手游排行榜&nbsp;|&nbsp;排行榜&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">回合制手游排行榜&nbsp;|&nbsp;排行榜&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">回合制手游排行榜&nbsp;|&nbsp;排行榜&nbsp;|&nbsp;</span><span class="date">2018-4-11</span></a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="title">
+        <div class="content">最新游戏资讯</div>
+        <a href="" class="change">
+          <i></i>更多+</a>
+      </div>
+      <div class="container">
+        <ul class="game-list">
+          <li class="game-item"><a href=""><span class="game-name">英雄联盟8.7新版本刀妹技能/实战视频分析！</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">英雄联盟8.7新版本刀妹技能/实战视频分析！</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">英雄联盟8.7新版本刀妹技能/实战视频分析！</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">英雄联盟8.7新版本刀妹技能/实战视频分析！</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">英雄联盟8.7新版本刀妹技能/实战视频分析！</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">英雄联盟8.7新版本刀妹技能/实战视频分析！</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">英雄联盟8.7新版本刀妹技能/实战视频分析！</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">英雄联盟8.7新版本刀妹技能/实战视频分析！</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">英雄联盟8.7新版本刀妹技能/实战视频分析！</span></a></li>
+          <li class="game-item"><a href=""><span class="game-name">英雄联盟8.7新版本刀妹技能/实战视频分析！</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="nav-list">
+      <a href="">
+        <em>网站地图</em>
+      </a>
+      <a href="">
+        <em>最新更新</em>
+      </a>
+      <a href="">
+        <em>电脑版</em>
+      </a>
+    </div>
+  </footer>
+  <script src="lib/js/vue.min.js"></script>
+  <script src="lib/js/common.js"></script>
+</body>
+
+</html>

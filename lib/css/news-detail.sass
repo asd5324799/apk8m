@@ -1,0 +1,63 @@
+@import 'components/crumbs.sass'
+@import 'components/section.sass'
+@import 'components/news-item.sass'
+@import 'components/loading.sass'
+@import 'components/top-list.sass'
+@import 'components/game-list.sass'
+
+.article
+  padding: 10px
+  .article-header
+    .article-title
+      line-height: 30px
+      font-size: 18px
+      font-weight: 600
+    .article-time
+      padding: 10px 0
+      border-bottom: 1px solid #dbe1ec
+      font-size: 12px
+      color: #999999
+      .text
+        margin-right: 15px
+  .article-bodyer
+    margin-top: 15px
+    p
+      line-height: 30px
+      font-size: 16px
+    img
+      max-width: 100%
+.tag-list
+  padding-bottom: 15px
+  border-bottom: 1px solid #dbe1ec
+  font-size: 0
+  .tag-item
+    display: inline-block
+    margin: 15px 0 0 10px
+    padding: 4px 8px
+    background: #f4f4f4
+    font-size: 14px
+    color: #808080
+.game-list
+  .game-item
+    border: none
+.type-list
+  margin: 0 10px 10px
+  .type-item
+    display: inline-block
+    height: 26px
+    line-height: 26px
+    padding: 0 14px
+    border: 1px solid
+    border-radius: 3px
+    &:nth-of-type(n)
+      color:#45abff
+      border-color:#45abff
+    &:nth-of-type(2n)
+      color:#86c610
+      border-color:#86c610
+    &:nth-of-type(5n)
+      color:#ff9d10
+      border-color:#ff9d10
+    &:nth-of-type(3n)
+      color:#00b573
+      border-color:#00b573

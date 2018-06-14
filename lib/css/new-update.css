@@ -1,0 +1,91 @@
+/* news-update */
+/* section */
+section {
+  margin-bottom: 10px;
+  border-top: 1px solid #dbe1ec;
+  border-bottom: 1px solid #dbe1ec;
+  background: #fff;
+}
+
+section .title {
+  padding: 15px 10px 15px 0;
+  border-bottom: 1px solid #dbe1ec;
+  overflow: hidden;
+}
+
+section .title .content {
+  float: left;
+  padding-left: 10px;
+  border-left: 5px solid #45abff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+section .title .more {
+  float: right;
+  margin-top: 2px;
+  font-size: 14px;
+  color: #999;
+}
+
+section .title .change {
+  float: right;
+  margin-top: -6px;
+  font-size: 16px;
+  color: #45abff;
+}
+
+section .title .change i {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+  background-image: url(../images/color-icon.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0px -302px;
+}
+
+section .title .text {
+  float: left;
+}
+
+section .title .text.on {
+  color: #45abff;
+}
+
+section .title .text.border-left {
+  display: inline-block;
+  height: 18px;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #333;
+}
+
+main {
+  margin-top: 104px;
+}
+
+.game-list .game-item {
+  margin: 0 10px;
+  padding: 10px 0 10px 10px;
+  border-bottom: 1px dashed #d7d7d7;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-image: url(../images/circle.png);
+  background-repeat: no-repeat;
+  background-size: 5px auto;
+  background-position: 0 15px;
+}
+
+.game-list .game-item .game-name {
+  color: #7f8080;
+}
+
+.game-list .game-item .date {
+  color: red;
+}

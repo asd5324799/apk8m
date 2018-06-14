@@ -1,0 +1,37 @@
+@import 'components/section.sass'
+@import 'components/crumbs.sass'
+@import 'components/type-list.sass'
+@import 'components/pagination.sass'
+
+.list-wrapper
+  display: none
+  border-bottom: 1px solid #dbe1ec
+  &.on
+    display: block
+  .comics-list
+    margin: 10px 10px 0
+    overflow: hidden
+    .comics-item
+      float: left
+      box-sizing: border-box
+      width: 32%
+      margin-right: 2%
+      margin-bottom: 10px
+      &:nth-of-type(3n)
+        margin-right: 0
+      .img-wrapper
+        position: relative
+        padding-top: 130%
+        border: 1px solid #dbe1ec
+        .comics-img
+          position: absolute
+          top: 2%
+          left: 2%
+          width: 96%
+      .text
+        padding: 5px
+        text-align: center
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+        

@@ -1,0 +1,351 @@
+/* crumbs */
+.crumbs {
+  height: 25px;
+  padding: 0 10px;
+  line-height: 25px;
+  font-size: 12px;
+  color: #bdbdbd;
+}
+
+.crumbs .text {
+  padding-right: 8px;
+}
+
+/* section */
+section {
+  margin-bottom: 10px;
+  border-top: 1px solid #dbe1ec;
+  border-bottom: 1px solid #dbe1ec;
+  background: #fff;
+}
+
+section .title {
+  padding: 15px 10px 15px 0;
+  border-bottom: 1px solid #dbe1ec;
+  overflow: hidden;
+}
+
+section .title .content {
+  float: left;
+  padding-left: 10px;
+  border-left: 5px solid #45abff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+section .title .more {
+  float: right;
+  margin-top: 2px;
+  font-size: 14px;
+  color: #999;
+}
+
+section .title .change {
+  float: right;
+  margin-top: -6px;
+  font-size: 16px;
+  color: #45abff;
+}
+
+section .title .change i {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+  background-image: url(../images/color-icon.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0px -302px;
+}
+
+section .title .text {
+  float: left;
+}
+
+section .title .text.on {
+  color: #45abff;
+}
+
+section .title .text.border-left {
+  display: inline-block;
+  height: 18px;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #333;
+}
+
+.news-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #dbe1ec;
+}
+
+.news-item a {
+  display: flex;
+}
+
+.news-item .news-img {
+  flex: 0 0 88px;
+  width: 88px;
+  height: 58px;
+  margin: 0 10px;
+}
+
+.news-item .container {
+  flex: 1;
+}
+
+.news-item .container .news-title {
+  height: 46px;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.news-item .container .news-date {
+  height: 12px;
+  line-height: 12px;
+  font-size: 12px;
+  color: #999;
+}
+
+/* loading */
+.loading {
+  height: 40px;
+  line-height: 40px;
+  background: #fff;
+  text-align: center;
+  font-size: 14px;
+  color: #45abff;
+}
+
+.top-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.top-list .top-item {
+  flex: 0 0 25%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.top-list .top-item .game-icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 10px auto 5px;
+  border-radius: 10px;
+}
+
+.top-list .top-item .text {
+  display: block;
+  line-height: 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.top-list .top-item .download {
+  display: block;
+  width: 64px;
+  height: 30px;
+  line-height: 30px;
+  margin: 5px auto 10px;
+  border: 1px solid #45abff;
+  border-radius: 5px;
+  color: #45abff;
+}
+
+/* game-list */
+.game-list {
+  overflow: hidden;
+}
+
+.game-list .game-item {
+  position: relative;
+  min-height: 64px;
+  padding: 10px;
+  border-bottom: 1px solid #dbe1ec;
+}
+
+.game-list .game-item img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 64px;
+  height: 64px;
+  border-radius: 5px;
+}
+
+.game-list .game-item .content {
+  padding-left: 74px;
+}
+
+.game-list .game-item .content .game-name {
+  padding-right: 65px;
+  font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.game-list .game-item .content .type {
+  margin: 9px 0;
+  padding-right: 65px;
+  font-size: 12px;
+  color: #999;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.game-list .game-item .content .type .border-left {
+  margin-left: 5px;
+  padding-left: 5px;
+  border-left: 1px solid #999;
+}
+
+.game-list .game-item .content .boon {
+  font-size: 12px;
+  color: #45abff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.game-list .game-item .download {
+  position: absolute;
+  right: 10px;
+  top: 25px;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  background: #45abff;
+  color: #fff;
+}
+
+.game-list .game-item.rank .num {
+  position: absolute;
+  left: 10px;
+  top: 28.5px;
+  width: 22px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+  background-size: 100%;
+}
+
+.game-list .game-item.rank .num.rank1 {
+  font-size: 0;
+  background-image: url(../images/list_no_1.png);
+}
+
+.game-list .game-item.rank .num.rank2 {
+  font-size: 0;
+  background-image: url(../images/list_no_2.png);
+}
+
+.game-list .game-item.rank .num.rank3 {
+  font-size: 0;
+  background-image: url(../images/list_no_3.png);
+}
+
+.game-list .game-item.rank img {
+  left: 42px;
+}
+
+.game-list .game-item.rank .content {
+  padding-left: 104px;
+}
+
+.article {
+  padding: 10px;
+}
+
+.article .article-header .article-title {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.article .article-header .article-time {
+  padding: 10px 0;
+  border-bottom: 1px solid #dbe1ec;
+  font-size: 12px;
+  color: #999999;
+}
+
+.article .article-header .article-time .text {
+  margin-right: 15px;
+}
+
+.article .article-bodyer {
+  margin-top: 15px;
+}
+
+.article .article-bodyer p {
+  line-height: 30px;
+  font-size: 16px;
+}
+
+.article .article-bodyer img {
+  max-width: 100%;
+}
+
+.tag-list {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dbe1ec;
+  font-size: 0;
+}
+
+.tag-list .tag-item {
+  display: inline-block;
+  margin: 15px 0 0 10px;
+  padding: 4px 8px;
+  background: #f4f4f4;
+  font-size: 14px;
+  color: #808080;
+}
+
+.game-list .game-item {
+  border: none;
+}
+
+.type-list {
+  margin: 0 10px 10px;
+}
+
+.type-list .type-item {
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 14px;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.type-list .type-item:nth-of-type(n) {
+  color: #45abff;
+  border-color: #45abff;
+}
+
+.type-list .type-item:nth-of-type(2n) {
+  color: #86c610;
+  border-color: #86c610;
+}
+
+.type-list .type-item:nth-of-type(5n) {
+  color: #ff9d10;
+  border-color: #ff9d10;
+}
+
+.type-list .type-item:nth-of-type(3n) {
+  color: #00b573;
+  border-color: #00b573;
+}

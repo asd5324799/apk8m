@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no" />
+  <title></title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="applicable-device" content="mobile">
+  <title>Document</title>
+  <link rel="stylesheet" href="lib/css/base.css">
+  <link rel="stylesheet" href="lib/css/news-detail.css">
+</head>
+
+<body>
+  <!-- header -->
+  <header id="header">
+    <!-- top -->
+    <div id="top">
+      <div>
+        <span :class="{on: isActive}" @click="isShow"></span>
+        <a href=""></a>
+        <div class="search">
+          <form action="" id="searchBox">
+            <input type="submit">
+            <div>
+              <input type="text" id="bdcsMain" placeholder="请输入关键字">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- nav -->
+    <div class="menu">
+      <ul>
+        <li>
+          <a href="/">首页</a>
+        </li>
+        <li>
+          <a href="">游戏</a>
+        </li>
+        <li>
+          <a href="">软件</a>
+        </li>
+        <li>
+          <a href="">排行榜</a>
+        </li>
+        <li>
+          <a href="">专题</a>
+        </li>
+        <li class="current">
+          <a href="">资讯</a>
+        </li>
+      </ul>
+    </div>
+    <!-- nav-list -->
+    <transition name="fade">
+      <div class="burger" v-show="showList">
+        <div class="mgame-yx">
+          <div class="Head1">
+            <h2>热门栏目</h2>
+          </div>
+          <ul class="icon-btn2">
+            <li>
+              <a href="">
+                <p>破解游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>变态手游</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>满V手游</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>单机游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>平板游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>儿童游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>排行榜</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>游戏专题</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>游戏资讯</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mgame-yx">
+          <div class="Head1">
+            <h2>破解版</h2>
+          </div>
+          <ul class="icon-btn2">
+            <li>
+              <a href="">
+                <p>内购破解</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>无限金币</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>汉化版</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mgame-yx">
+          <div class="Head1">
+            <h2>其他栏目</h2>
+          </div>
+          <ul class="icon-btn2">
+            <li>
+              <a href="">
+                <p>手机主题</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>手机主题</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>游戏视频</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>安卓漫画</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="back">
+          <button @click="isShow">关闭菜单</button>
+        </div>
+      </div>
+    </transition>
+    <!-- return-top -->
+    <div class="return-top" v-show="returnShow">
+      <a href="/" class="index-page"></a>
+      <a href="javascript:void(0);" class="top" @click="backTop"></a>
+    </div>
+  </header>
+  <!-- main -->
+  <main id="main">
+    <!-- crumbs -->
+    <div class="crumbs">
+      <a href="" class="text">首页</a>
+      <span class="text">></span>
+      <a href="" class="text">游戏资讯</a>
+      <span class="text">></span>
+      <span class="text">游戏攻略</span>
+    </div>
+    <!-- article-detail -->
+    <section class="article">
+      <div class="article-header">
+        <div class="article-title">实况足球手游阵型怎么排 实况足球手游阵型选择</div>
+        <div class="article-time">
+          <span class="text">时间：2018-04-15</span>
+          <span class="text">作者：小编</span>
+        </div>
+      </div>
+      <div class="article-bodyer">
+        <p>　　在实况足球手游绿茵场上，球队阵型是一个球队战术的根本。今天小编将给大家解析一下实况足球组队的思路，现在我们就一起来看看吧。</p>
+        <p>　　推荐阅读：
+          <a href="//www.xiaopi.com/news/130660.html" se_prerender_url="complete" target="_blank">实况足球手游怎么组建球队 实况足球手游球队组建技巧</a>
+        </p>
+        <p>　　阵型选择</p>
+        <p>　　首先在《是款足球》这款游戏中，进入我的阵型当中，选择4321阵型</p>
+        <center>
+          <p>
+            <img alt="实况足球手游阵型" src="http://www.xiaopi.com/game/uploadfile/2018/0402/20180402105745450.jpg" style="width: 500px; height: 333px;">
+          </p>
+        </center>
+        <p>　　基本阵型</p>
+        <p>　　圣诞树阵型，一般就是指4-3-2-1阵型：4个后卫，3个中场，2个前腰或者2个内锋，1个前锋。</p>
+        <p>　　建队思路</p>
+        <p>　　1.需要有能拿住球的单箭头中锋</p>
+        <p>　　2.以及有较好传控射能力的2个前腰球员或者内锋。</p>
+        <p>　　3.三个中前卫可以选择穿插跑位积极的球员，可以选择一个偏防守的中前卫拖后，左右两个中前卫也要攻守平衡，传球和防守能力一定要出色。</p>
+        <p>　　4.这个阵型由于边路的进攻全靠插上的边后卫，所以在攻防两端，边后卫都要能够非常出色的完成任务。</p>
+        <p>　　5.中后卫要求有一定速度，对中后卫回追的能力要求很高。</p>
+        <p>　　以上就是关于实况足球的相关攻略资讯，如想了解更多，欢迎关注小皮网。</p>
+      </div>
+    </section>
+    <!-- tag -->
+    <section>
+      <div class="title">
+        <h4 class="content">玩家热搜</h4>
+      </div>
+      <ul class="tag-list">
+        <li class="tag-item">
+          <a href="">安卓下载</a>
+        </li>
+        <li class="tag-item">
+          <a href="">特殊符号大全</a>
+        </li>
+        <li class="tag-item">
+          <a href="">体验服抢号时间表</a>
+        </li>
+        <li class="tag-item">
+          <a href="">体验服抢号教程</a>
+        </li>
+        <li class="tag-item">
+          <a href="">s11新英雄爆料</a>
+        </li>
+      </ul>
+      <a href="" class="loading">查看更多</a>
+    </section>
+    <!-- game-info -->
+    <section class="game-list">
+      <div class="game-item">
+        <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="">
+        <div class="content">
+          <div class="game-name">楚留香手游</div>
+          <div class="type">
+            <span class="text">大型游戏</span>
+            <span class="text border-left">343.90MB</span>
+          </div>
+          <div class="boon">上线赠送满级VIP特权，元宝9999！</div>
+        </div>
+        <a href="" class="download">安装</a>
+      </div>
+      <ul class="type-list">
+        <li class="type-item">破解版</li>
+        <li class="type-item">汉化版</li>
+        <li class="type-item">无限金币版</li>
+        <li class="type-item">汉化版</li>
+      </ul>
+    </section>
+    <!-- about-walkthrough -->
+    <section>
+      <div class="title">
+        <h4 class="content">相关攻略</h4>
+        <a href="" class="change">
+          <i></i>更多+</a>
+      </div>
+      <ul class="news-list">
+        <li class="news-item">
+          <a href="">
+            <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+            <div class="container">
+              <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+              <div class="news-date">2018-04-26 10:00:01</div>
+            </div>
+          </a>
+        </li>
+        <li class="news-item">
+          <a href="">
+            <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+            <div class="container">
+              <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+              <div class="news-date">2018-04-26 10:00:01</div>
+            </div>
+          </a>
+        </li>
+        <li class="news-item">
+          <a href="">
+            <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+            <div class="container">
+              <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+              <div class="news-date">2018-04-26 10:00:01</div>
+            </div>
+          </a>
+        </li>
+        <li class="news-item">
+          <a href="">
+            <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+            <div class="container">
+              <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+              <div class="news-date">2018-04-26 10:00:01</div>
+            </div>
+          </a>
+        </li>
+        <li class="news-item">
+          <a href="">
+            <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+            <div class="container">
+              <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+              <div class="news-date">2018-04-26 10:00:01</div>
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="loading" @click="loadingMore">{{more}}</div>
+    </section>
+    <!-- hot-game -->
+    <section>
+      <div class="title">
+        <h4 class="content">热门软件</h4>
+        <a href="" class="change">
+          <i></i>更多+</a>
+      </div>
+      <ul class="top-list">
+        <li class="top-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="text">王者荣耀王者荣耀王者荣耀</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="top-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="text">王者荣耀</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="top-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="text">王者荣耀</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="top-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="text">王者荣耀</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="top-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="text">王者荣耀王者荣耀王者荣耀</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="top-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="text">王者荣耀</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="top-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="text">王者荣耀</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="top-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="text">王者荣耀</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer>
+    <div class="nav-list">
+      <a href="">
+        <em>网站地图</em>
+      </a>
+      <a href="">
+        <em>最新更新</em>
+      </a>
+      <a href="">
+        <em>电脑版</em>
+      </a>
+    </div>
+  </footer>
+  <script src="lib/js/vue.min.js"></script>
+  <script src="lib/js/axios.min.js"></script>
+  <script src="lib/js/common.js"></script>
+  <script src="lib/js/news-detail.js"></script>
+</body>
+
+</html>

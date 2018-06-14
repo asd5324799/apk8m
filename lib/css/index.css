@@ -1,0 +1,571 @@
+/* index.css*/
+/* section */
+section {
+  margin-bottom: 10px;
+  border-top: 1px solid #dbe1ec;
+  border-bottom: 1px solid #dbe1ec;
+  background: #fff;
+}
+
+section .title {
+  padding: 15px 10px 15px 0;
+  border-bottom: 1px solid #dbe1ec;
+  overflow: hidden;
+}
+
+section .title .content {
+  float: left;
+  padding-left: 10px;
+  border-left: 5px solid #45abff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+section .title .more {
+  float: right;
+  margin-top: 2px;
+  font-size: 14px;
+  color: #999;
+}
+
+section .title .change {
+  float: right;
+  margin-top: -6px;
+  font-size: 16px;
+  color: #45abff;
+}
+
+section .title .change i {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+  background-image: url(../images/color-icon.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0px -302px;
+}
+
+section .title .text {
+  float: left;
+}
+
+section .title .text.on {
+  color: #45abff;
+}
+
+section .title .text.border-left {
+  display: inline-block;
+  height: 18px;
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #333;
+}
+
+/* game-list */
+.game-list {
+  overflow: hidden;
+}
+
+.game-list .game-item {
+  position: relative;
+  min-height: 64px;
+  padding: 10px;
+  border-bottom: 1px solid #dbe1ec;
+}
+
+.game-list .game-item img {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 64px;
+  height: 64px;
+  border-radius: 5px;
+}
+
+.game-list .game-item .content {
+  padding-left: 74px;
+}
+
+.game-list .game-item .content .game-name {
+  padding-right: 65px;
+  font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.game-list .game-item .content .type {
+  margin: 9px 0;
+  padding-right: 65px;
+  font-size: 12px;
+  color: #999;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.game-list .game-item .content .type .border-left {
+  margin-left: 5px;
+  padding-left: 5px;
+  border-left: 1px solid #999;
+}
+
+.game-list .game-item .content .boon {
+  font-size: 12px;
+  color: #45abff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.game-list .game-item .download {
+  position: absolute;
+  right: 10px;
+  top: 25px;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  background: #45abff;
+  color: #fff;
+}
+
+.game-list .game-item.rank .num {
+  position: absolute;
+  left: 10px;
+  top: 28.5px;
+  width: 22px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+  background-size: 100%;
+}
+
+.game-list .game-item.rank .num.rank1 {
+  font-size: 0;
+  background-image: url(../images/list_no_1.png);
+}
+
+.game-list .game-item.rank .num.rank2 {
+  font-size: 0;
+  background-image: url(../images/list_no_2.png);
+}
+
+.game-list .game-item.rank .num.rank3 {
+  font-size: 0;
+  background-image: url(../images/list_no_3.png);
+}
+
+.game-list .game-item.rank img {
+  left: 42px;
+}
+
+.game-list .game-item.rank .content {
+  padding-left: 104px;
+}
+
+/* swiper */
+#index-swiper {
+  width: 100%;
+  height: 180px;
+}
+
+#index-swiper .swiper-slide .img {
+  width: 100%;
+  height: 100%;
+}
+
+#index-swiper .swiper-pagination-bullet {
+  width: 16px;
+  height: 4px;
+  border-radius: 5px;
+}
+
+/* nav */
+.nav .nav-list {
+  display: flex;
+}
+
+.nav .nav-list .nav-item {
+  flex: 1;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.nav .nav-list .nav-item .icon {
+  display: block;
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 5px;
+}
+
+/* game-recommend */
+.game-recommend .top-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game-recommend .top-list .top-item {
+  flex: 0 0 25%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.game-recommend .top-list .top-item .game-icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 10px auto 5px;
+  border-radius: 10px;
+}
+
+.game-recommend .top-list .top-item .text {
+  display: block;
+  line-height: 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.game-recommend .top-list .top-item .download {
+  display: block;
+  width: 64px;
+  height: 30px;
+  line-height: 30px;
+  margin: 5px auto 10px;
+  border: 1px solid #45abff;
+  border-radius: 5px;
+  color: #45abff;
+}
+
+/* game-break and hot-game */
+.game-break .app-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.game-break .app-list .app-item {
+  flex: 0 0 25%;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.game-break .app-list .app-item .game-icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.game-break .app-list .app-item .game-name {
+  display: block;
+  margin-top: 5px;
+  line-height: 18px;
+  font-size: 12px;
+}
+
+/* must-app */
+.must-app .app-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.must-app .app-list .app-item {
+  flex: 0 0 25%;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.must-app .app-list .app-item .app-icon {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.must-app .app-list .app-item .app-name {
+  display: block;
+  line-height: 28px;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.must-app .app-list .app-item .download {
+  display: block;
+  width: 64px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+  border: 1px solid #72c322;
+  border-radius: 5px;
+  color: #72c322;
+}
+
+/* rank */
+.rank .rank-list .rank-item {
+  position: relative;
+  min-height: 64px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.rank .rank-list .rank-item .num {
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 22px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  font-size: 16px;
+  color: #999;
+}
+
+.rank .rank-list .rank-item.rank1 {
+  background-image: url(../images/list_no_1.png);
+  background-size: 100%;
+  font-size: 0;
+}
+
+.rank .rank-list .rank-item.rank2 {
+  background-image: url(../images/list_no_2.png);
+  background-size: 100%;
+  font-size: 0;
+}
+
+.rank .rank-list .rank-item.rank3 {
+  background-image: url(../images/list_no_3.png);
+  background-size: 100%;
+  font-size: 0;
+}
+
+.rank .rank-list .rank-item .game-icon {
+  position: absolute;
+  left: 32px;
+  top: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.rank .rank-list .rank-item .container {
+  padding: 10px 70px 0 112px;
+}
+
+.rank .rank-list .rank-item .container .game-name {
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.rank .rank-list .rank-item .container .type {
+  color: #999;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.rank .rank-list .rank-item .download {
+  position: absolute;
+  right: 0px;
+  top: 15px;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  text-align: center;
+  background: #45abff;
+  color: #fff;
+}
+
+/* topic */
+.game-topic .topic-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+}
+
+.game-topic .topic-item {
+  flex: 0 0 50%;
+  margin-top: 15px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.game-topic .topic-item .topic-icon {
+  display: block;
+  width: 90%;
+  height: 84px;
+  margin: 0 auto 5px;
+  border-radius: 5px;
+}
+
+.game-topic .topic-item .text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* hot-news */
+.hot-news .Head3 {
+  display: block;
+  position: relative;
+  background: #fff;
+  height: 42px;
+  overflow: hidden;
+}
+
+.hot-news .Head3 span {
+  display: inline-block;
+  position: absolute;
+  z-index: 9;
+  width: 50%;
+  left: 20%;
+  height: 21px;
+  background: #f7f7f7;
+}
+
+.hot-news .Head3 em {
+  display: inline-block;
+  position: absolute;
+  z-index: 9;
+  width: 50%;
+  top: 21px;
+  left: 20%;
+  height: 21px;
+  background: #fff;
+}
+
+.hot-news .Head3 .Head3-box {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.hot-news .Head3 .Head3-box a {
+  float: left;
+  text-align: center;
+  background: #f7f7f7;
+  color: #666;
+  font-size: 16px;
+  line-height: 42px;
+  width: 50%;
+}
+
+.hot-news .Head3 .Head3-box a.cur2 {
+  background: #fff;
+  color: #333;
+}
+
+.hot-news .Head3 .Head3-box a:first-of-type.off {
+  border-radius: 0px 0px 21px;
+}
+
+.hot-news .Head3 .Head3-box a:last-of-type.cur2 {
+  border-radius: 21px 0px 0px;
+}
+
+.hot-news .Head3 .Head3-box a:first-of-type.cur2 {
+  border-radius: 0px 21px 0px 0px;
+}
+
+.hot-news .Head3 .Head3-box a:last-of-type.off {
+  border-radius: 0px 0px 0px 21px;
+}
+
+.hot-news .news-list {
+  opacity: 1;
+  transition: all .3S ease-in;
+}
+
+.hot-news .news-list.newsList-enter-active {
+  opacity: 0;
+}
+
+.hot-news .news-list.newsList-leave-active {
+  display: none;
+}
+
+.hot-news .news-list .news-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #dbe1ec;
+}
+
+.hot-news .news-list .news-item a {
+  display: flex;
+}
+
+.hot-news .news-list .news-item .news-img {
+  flex: 0 0 88px;
+  width: 88px;
+  height: 58px;
+  margin: 0 10px;
+}
+
+.hot-news .news-list .news-item .container {
+  flex: 1;
+}
+
+.hot-news .news-list .news-item .container .news-title {
+  height: 46px;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.hot-news .news-list .news-item .container .news-date {
+  height: 12px;
+  line-height: 12px;
+  font-size: 12px;
+  color: #999;
+}
+
+.hot-news .news-list .more {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px #dbe1ec solid;
+  color: #999;
+}
+
+/* friend-link */
+.friend-link .friend-title {
+  font-size: 15px;
+  height: 45px;
+  line-height: 45px;
+  padding-left: 10px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.friend-link .container {
+  overflow: hidden;
+  margin: 5px 10px;
+}
+
+.friend-link .container a {
+  font-size: 12px;
+  box-sizing: border-box;
+  color: #666;
+  width: 33.3%;
+  float: left;
+  line-height: 28px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}

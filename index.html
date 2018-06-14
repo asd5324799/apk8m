@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no" />
+  <title></title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="applicable-device" content="mobile">
+  <title>Document</title>
+  <link rel="stylesheet" href="lib/css/base.css">
+  <link rel="stylesheet" href="lib/css/swiper-4.2.2.min.css">
+  <link rel="stylesheet" href="lib/css/index.css">
+</head>
+
+<body>
+  <header id="header">
+    <!-- top -->
+    <div id="top">
+      <div>
+        <span :class="{on: isActive}" @click="isShow"></span>
+        <a href=""></a>
+        <div class="search">
+          <form action="" id="searchBox">
+            <input type="submit">
+            <div>
+              <input type="text" id="bdcsMain" placeholder="请输入关键字">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- nav -->
+    <div class="menu">
+      <ul>
+        <li class="current">
+          <a href="/">首页</a>
+        </li>
+        <li>
+          <a href="">游戏</a>
+        </li>
+        <li>
+          <a href="">软件</a>
+        </li>
+        <li>
+          <a href="">排行榜</a>
+        </li>
+        <li>
+          <a href="">专题</a>
+        </li>
+        <li>
+          <a href="">资讯</a>
+        </li>
+      </ul>
+    </div>
+    <!-- nav-list -->
+    <transition name="fade">
+      <div class="burger" v-show="showList">
+        <div class="mgame-yx">
+          <div class="Head1">
+            <h2>热门栏目</h2>
+          </div>
+          <ul class="icon-btn2">
+            <li>
+              <a href="">
+                <p>破解游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>变态手游</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>满V手游</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>单机游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>平板游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>儿童游戏</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>排行榜</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>游戏专题</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>游戏资讯</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mgame-yx">
+          <div class="Head1">
+            <h2>破解版</h2>
+          </div>
+          <ul class="icon-btn2">
+            <li>
+              <a href="">
+                <p>内购破解</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>无限金币</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>汉化版</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mgame-yx">
+          <div class="Head1">
+            <h2>其他栏目</h2>
+          </div>
+          <ul class="icon-btn2">
+            <li>
+              <a href="">
+                <p>手机壁纸</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>手机主题</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>游戏视频</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p>安卓漫画</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="back">
+          <button @click="isShow">关闭菜单</button>
+        </div>
+      </div>
+    </transition>
+    <!-- return-top -->
+    <div class="return-top" v-show="returnShow">
+      <a href="/" class="index-page"></a>
+      <a href="javascript:void(0);" class="top" @click="backTop"></a>
+    </div>
+  </header>
+  <main id="main">
+    <!-- swiper -->
+    <div class="swiper-container" id="index-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="">
+            <img src="http://img.newyx.net/tj/201804/03/a969c99493.jpg" alt="" class="img">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="">
+            <img src="http://img.newyx.net/tj/201804/03/a969c99493.jpg" alt="" class="img">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="">
+            <img src="http://img.newyx.net/tj/201804/03/a969c99493.jpg" alt="" class="img">
+          </a>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- nav -->
+    <section class="nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="">
+            <img src="lib/images/nav1.png" alt="" class="icon">
+            <span>破解</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="">
+            <img src="lib/images/nav3.png" alt="" class="icon">
+            <span>单机</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="">
+            <img src="lib/images/nav7.png" alt="" class="icon">
+            <span>BT</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="">
+            <img src="lib/images/nav4.png" alt="" class="icon">
+            <span>满V</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="">
+            <img src="lib/images/nav5.png" alt="" class="icon">
+            <span>平板</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- game-recommend -->
+    <section class="game-recommend">
+      <div class="title">
+        <h4 class="content">推荐手游</h4>
+        <a href="" class="more">查看更多>></a>
+      </div>
+      <ul class="top-list">
+        <li class="top-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="text">王者荣耀王者荣耀王者荣耀</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="top-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="text">王者荣耀</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="top-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="text">王者荣耀</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="top-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="text">王者荣耀</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+      </ul>
+      <ul class="game-list">
+        <li class="game-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="">
+            <div class="content">
+              <div class="game-name">楚留香手游</div>
+              <div class="type">
+                <span class="text">大型游戏</span>
+                <span class="text border-left">343.90MB</span>
+              </div>
+              <div class="boon">上线赠送满级VIP特权，元宝9999！</div>
+            </div>
+          </a>
+          <a href="" class="download">安装</a>
+        </li>
+        <li class="game-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="">
+            <div class="content">
+              <div class="game-name">楚留香手游</div>
+              <div class="type">
+                <span class="text">大型游戏</span>
+                <span class="text border-left">343.90MB</span>
+              </div>
+              <div class="boon">上线赠送满级VIP特权，元宝9999！</div>
+            </div>
+          </a>
+          <a href="" class="download">安装</a>
+        </li>
+        <li class="game-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="">
+            <div class="content">
+              <div class="game-name">楚留香手游</div>
+              <div class="type">
+                <span class="text">大型游戏</span>
+                <span class="text border-left">343.90MB</span>
+              </div>
+              <div class="boon">上线赠送满级VIP特权，元宝9999！</div>
+            </div>
+          </a>
+          <a href="" class="download">安装</a>
+        </li>
+        <li class="game-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="">
+            <div class="content">
+              <div class="game-name">楚留香手游</div>
+              <div class="type">
+                <span class="text">大型游戏</span>
+                <span class="text border-left">343.90MB</span>
+              </div>
+              <div class="boon">上线赠送满级VIP特权，元宝9999！</div>
+            </div>
+          </a>
+          <a href="" class="download">安装</a>
+        </li>
+      </ul>
+    </section>
+    <!--game-break and hot-game-->
+    <section class="game-break">
+      <div class="title">
+        <h4 class="content">破解游戏</h4>
+        <a href="" class="more">查看更多>></a>
+      </div>
+      <ul class="app-list">
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- game-break and hot-game -->
+    <section class="game-break">
+      <div class="title">
+        <h4 class="content">热门网游</h4>
+        <a href="" class="more">查看更多>></a>
+      </div>
+      <ul class="app-list">
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <span class="game-name">全民天天抓娃娃破解版</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- must-app -->
+    <section class="must-app">
+      <div class="title">
+        <h4 class="content">必备软件</h4>
+        <a href="" class="more">查看更多>></a>
+      </div>
+      <ul class="app-list">
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="app-icon">
+            <span class="app-name">科学相机</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="app-icon">
+            <span class="app-name">科学相机</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="app-icon">
+            <span class="app-name">科学相机</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="app-icon">
+            <span class="app-name">科学相机</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="app-icon">
+            <span class="app-name">科学相机</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="app-icon">
+            <span class="app-name">科学相机</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="app-icon">
+            <span class="app-name">科学相机</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="app-item">
+          <a href="">
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="app-icon">
+            <span class="app-name">科学相机</span>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+      </ul>
+    </section>
+    <!-- rank -->
+    <section class="rank">
+      <div class="title">
+        <h4 class="content">排行榜</h4>
+        <a href="" class="more">查看更多>></a>
+      </div>
+      <ul class="rank-list">
+        <li class="rank-item">
+          <a href="">
+            <div class="num rank1">1</div>
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <div class="container">
+              <div class="game-name">迷你世界无限迷你破解版</div>
+              <div class="type">大型游戏&nbsp;|&nbsp;343.90MB</div>
+            </div>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="rank-item">
+          <a href="">
+            <div class="num rank2">2</div>
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <div class="container">
+              <div class="game-name">迷你世界无限迷你破解版</div>
+              <div class="type">大型游戏&nbsp;|&nbsp;343.90MB</div>
+            </div>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="rank-item">
+          <a href="">
+            <div class="num rank3">3</div>
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <div class="container">
+              <div class="game-name">迷你世界无限迷你破解版</div>
+              <div class="type">大型游戏&nbsp;|&nbsp;343.90MB</div>
+            </div>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="rank-item">
+          <a href="">
+            <div class="num rank4">4</div>
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <div class="container">
+              <div class="game-name">迷你世界无限迷你破解版</div>
+              <div class="type">大型游戏&nbsp;|&nbsp;343.90MB</div>
+            </div>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+        <li class="rank-item">
+          <a href="">
+            <div class="num rank5">5</div>
+            <img src="http://img.newyx.net/thumb/android/201510/27/4a29d6b696_120_120.jpeg" alt="" class="game-icon">
+            <div class="container">
+              <div class="game-name">迷你世界无限迷你破解版</div>
+              <div class="type">大型游戏&nbsp;|&nbsp;343.90MB</div>
+            </div>
+          </a>
+          <a href="" class="download">下载</a>
+        </li>
+      </ul>
+    </section>
+    <!-- game-topic -->
+    <section class="game-topic">
+      <div class="title">
+        <h4 class="content">游戏专题</h4>
+        <a href="" class="more">查看更多>></a>
+      </div>
+      <ul class="topic-list">
+        <li class="topic-item">
+          <a href="">
+            <img src="http://img.newyx.net/tj/201804/03/a969c99493.jpg" alt="" class="topic-icon">
+            <div class="text">满V无限元宝公益服手游</div>
+          </a>
+        </li>
+        <li class="topic-item">
+          <a href="">
+            <img src="http://img.newyx.net/tj/201804/03/a969c99493.jpg" alt="" class="topic-icon">
+            <div class="text">满V无限元宝公益服手游</div>
+          </a>
+        </li>
+        <li class="topic-item">
+          <a href="">
+            <img src="http://img.newyx.net/tj/201804/03/a969c99493.jpg" alt="" class="topic-icon">
+            <div class="text">满V无限元宝公益服手游</div>
+          </a>
+        </li>
+        <li class="topic-item">
+          <a href="">
+            <img src="http://img.newyx.net/tj/201804/03/a969c99493.jpg" alt="" class="topic-icon">
+            <div class="text">满V无限元宝公益服手游</div>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- hot-news -->
+    <section class="hot-news">
+      <div class="Head3">
+        <span></span>
+        <em></em>
+        <div class="Head3-box">
+          <a :class="{cur2: newsList === 1, off: newsList === 2}" @click="tab(1);">最新资讯</a>
+          <a :class="{cur2: newsList === 2, off: newsList === 1}" @click="tab(2);">最新攻略</a>
+        </div>
+      </div>
+      <transition name="newsList">
+        <ul class="news-list" v-show="newsList === 1">
+          <li class="news-item">
+            <a href="http://m.newyx.net/news/434322.html">
+              <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+              <div class="container">
+                <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+                <div class="news-date">2018-04-26 10:00:01</div>
+              </div>
+            </a>
+          </li>
+          <li class="news-item">
+            <a href="">
+              <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+              <div class="container">
+                <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+                <div class="news-date">2018-04-26 10:00:01</div>
+              </div>
+            </a>
+          </li>
+          <li class="news-item">
+            <a href="">
+              <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+              <div class="container">
+                <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+                <div class="news-date">2018-04-26 10:00:01</div>
+              </div>
+            </a>
+          </li>
+          <li class="news-item">
+            <a href="">
+              <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+              <div class="container">
+                <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+                <div class="news-date">2018-04-26 10:00:01</div>
+              </div>
+            </a>
+          </li>
+          <li class="news-item">
+            <a href="">
+              <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+              <div class="container">
+                <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+                <div class="news-date">2018-04-26 10:00:01</div>
+              </div>
+            </a>
+          </li>
+          <span class="more">
+            <a href="">更多内容+ </a>
+          </span>
+        </ul>
+      </transition>
+      <transition name="newsList">
+        <ul class="news-list" v-show="newsList === 2">
+          <li class="news-item">
+            <a href="http://m.newyx.net/news/434322.html">
+              <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+              <div class="container">
+                <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节2</div>
+                <div class="news-date">2018-04-26 10:00:01</div>
+              </div>
+            </a>
+          </li>
+          <li class="news-item">
+            <a href="">
+              <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+              <div class="container">
+                <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+                <div class="news-date">2018-04-26 10:00:01</div>
+              </div>
+            </a>
+          </li>
+          <li class="news-item">
+            <a href="">
+              <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+              <div class="container">
+                <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+                <div class="news-date">2018-04-26 10:00:01</div>
+              </div>
+            </a>
+          </li>
+          <li class="news-item">
+            <a href="">
+              <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+              <div class="container">
+                <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+                <div class="news-date">2018-04-26 10:00:01</div>
+              </div>
+            </a>
+          </li>
+          <li class="news-item">
+            <a href="">
+              <img class="news-img" src="http://img.newyx.net/thumb/newspic/image/201804/26/bf7cc34840_176_116.jpg" alt="" title="">
+              <div class="container">
+                <div class="news-title">深耕二次元 《幻想计划》亮相第十四届中国国际动漫节</div>
+                <div class="news-date">2018-04-26 10:00:01</div>
+              </div>
+            </a>
+          </li>
+          <span class="more">
+            <a href="">更多内容+ </a>
+          </span>
+        </ul>
+      </transition>
+    </section>
+    <!-- friend-link -->
+    <section class="friend-link">
+      <div class="friend-title">友情连接</div>
+      <div class="container">
+        <a href="">爪游控</a>
+        <a href="">爪游控</a>
+        <a href="">爪游控</a>
+        <a href="">爪游控</a>
+        <a href="">爪游控</a>
+      </div>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer>
+    <div class="nav-list">
+      <a href="">
+        <em>网站地图</em>
+      </a>
+      <a href="">
+        <em>最新更新</em>
+      </a>
+      <a href="">
+        <em>电脑版</em>
+      </a>
+    </div>
+  </footer>
+  <script src="lib/js/vue.min.js"></script>
+  <script src="lib/js/common.js"></script>
+  <script src="lib/js/swiper-4.2.2.min.js"></script>
+  <script src="lib/js/index.js"></script>
+</body>
+
+</html>

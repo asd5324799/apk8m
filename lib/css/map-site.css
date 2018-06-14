@@ -1,0 +1,15 @@
+/*nav-list*/
+main .burger{ width:100%; padding-bottom: 20px; background: rgba(255, 255, 255, 1);}
+main .burger.fade-enter, main .burger.fade-leave-to { height: 0;}
+main .burger::-webkit-scrollbar{width:0;}
+main .special-burger{top:40px;}
+/*nav-list-Head1*/
+main .Head1{display: block;padding: 0 12px;overflow: hidden;}
+main .Head1 h2{float: left;color: #333;font-size: 15px;line-height: 42px; font-weight:bold;}
+main .icon-btn2{margin:0 10px -5px;overflow:hidden;}
+main .icon-btn2 li{float:left;width:33.33%;margin:0 0 5px;text-align:center}
+main .icon-btn2 li a{display:inline-block;background-color:#fff;background-image: url(../images/color-icon.png);background-repeat: no-repeat;background-size: 20px auto;background-position: 10px -296px;width:90%;border-radius:4px;overflow:hidden;border:1px solid #dbdbdb;}
+main .icon-btn2 li a p{display:inline-block;font-size:14px;line-height:16px;margin:9px 0;padding-left: 15px;}
+main .icon-btn2 li a:active{background:#bbb;}
+main .icon-btn2 li a p:active{color:#fff;}
+main .burger .icon-btn2.icon-btn3 li { width: 50%;}
